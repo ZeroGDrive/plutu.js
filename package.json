@@ -1,0 +1,36 @@
+{
+  "name": "plutu-ts",
+  "version": "0.0.1",
+  "description": "API Wrapper for plutu.ly",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "umd:main": "dist/index.umd.js",
+  "source": "src/index.ts",
+  "repository": "https://github.com/ZeroGDrive/plutu-ts.git",
+  "author": "Ayoub Alfurjani",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && microbundle  --tsconfig tsconfig.json",
+    "dev": "microbundle watch --tsconfig tsconfig.json",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "microbundle": "^0.14.2"
+  },
+  "keywords": [
+    "plutu.ly",
+    "javascript",
+    "typescript",
+    "api",
+    "client"
+  ],
+  "files": [
+    "src",
+    "dist"
+  ],
+  "dependencies": {
+    "isomorphic-unfetch": "^3.1.0"
+  }
+}
