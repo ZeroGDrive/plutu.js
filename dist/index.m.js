@@ -1,2 +1,0 @@
-function t(e,o){return t=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t},t(e,o)}var e=/*#__PURE__*/function(e){var o,r;function n(){return e.apply(this,arguments)||this}return r=e,(o=n).prototype=Object.create(r.prototype),o.prototype.constructor=o,t(o,r),n}(function(t){this.apiKey=void 0,this.accessToken=void 0,this.apiKey=t.apiKey,this.accessToken=t.accessToken});export{e as default};
-//# sourceMappingURL=index.m.js.map

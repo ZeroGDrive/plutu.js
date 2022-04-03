@@ -1,2 +1,0 @@
-function t(e,o){return t=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t},t(e,o)}module.exports=/*#__PURE__*/function(e){var o,n;function r(){return e.apply(this,arguments)||this}return n=e,(o=r).prototype=Object.create(n.prototype),o.prototype.constructor=o,t(o,n),r}(function(t){this.apiKey=void 0,this.accessToken=void 0,this.apiKey=t.apiKey,this.accessToken=t.accessToken});
-//# sourceMappingURL=index.js.map
