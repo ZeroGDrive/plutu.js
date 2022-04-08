@@ -1,10 +1,10 @@
-export type VerifySadadRequest = {
+export type SadadVerifyRequest = {
   mobile_number: string;
   birth_year: string;
   amount: string;
 };
 
-export type ConfirmSadadRequest = {
+export type SadadConfirmRequest = {
   process_id: string;
   amount: string;
   code: string;
@@ -12,11 +12,11 @@ export type ConfirmSadadRequest = {
   customer_ip: string;
 };
 
-export type VerifySadadResult = {
+export type SadadVerifyResult = {
   process_id: string;
 };
 
-export type ConfirmSadadResult = {
+export type SadadConfirmResult = {
   transaction_id: string;
   amount: string;
 };
