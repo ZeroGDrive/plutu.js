@@ -3,7 +3,7 @@ type Config = {
   accessToken: string;
 };
 
-export type SuccessResponse<T> = {
+export type PlutuResponse<T> = {
   status: number;
   result: T;
   message: string;
@@ -30,7 +30,7 @@ export abstract class Base {
   protected async request<T>(
     endpoint: string,
     options?: RequestInit
-  ): Promise<SuccessResponse<T>> {
+  ): Promise<PlutuResponse<T>> {
     const url = this.basePath + endpoint;
     const headers = {
       'X-API-KEY': this.apiKey,
