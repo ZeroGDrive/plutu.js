@@ -3,6 +3,20 @@ type Config = {
   accessToken: string;
 };
 
+export type SuccessResponse<T> = {
+  status: number;
+  result: T;
+  message: string;
+};
+
+export type ErrorResponse = {
+  error: {
+    status: number;
+    code: string;
+    message: string;
+  };
+};
+
 export abstract class Base {
   private apiKey: string;
   private accessToken: string;
@@ -13,16 +27,20 @@ export abstract class Base {
     this.accessToken = config.accessToken;
   }
 
-  protected async request<T, K>(endpoint: string, body: K): Promise<T> {
+  protected async request<T>(
+    endpoint: string,
+    options?: RequestInit
+  ): Promise<SuccessResponse<T>> {
     const url = this.basePath + endpoint;
     const headers = {
       'X-API-KEY': this.apiKey,
       Authorization: `Bearer ${this.accessToken}`,
+      'Content-type': 'application/json',
     };
 
     const config = {
+      ...options,
       headers,
-      body: JSON.stringify(body),
     };
 
     return fetch(url, config)
@@ -32,7 +50,7 @@ export abstract class Base {
         }
         throw new Error(r.statusText);
       })
-      .catch((e) => {
+      .catch((e: ErrorResponse) => {
         return Promise.reject(e);
       });
   }
