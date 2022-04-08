@@ -8,8 +8,8 @@ A tiny client for the plutu.ly API written in Typescript.
 
 <div> 
 <a href="https://www.npmjs.com/package/plutu-ts"><img src="https://img.shields.io/npm/v/plutu-ts" alt="plutu-ts"></a>
-<a href="https://unpkg.com/plutu-ts"><img src="https://img.badgesize.io/https://unpkg.com/plutu-ts@0.0.1/dist/index.js?compression=gzip" alt="gzip size"></a>
-<a href="https://unpkg.com/plutu-ts"><img src="https://img.badgesize.io/https://unpkg.com/plutu-ts@0.0.1/dist/index.js?compression=brotli" alt="brotli size"></a>
+<a href="https://unpkg.com/plutu-ts"><img src="https://img.badgesize.io/https://unpkg.com/plutu-ts@0.0.2/dist/index.js?compression=gzip" alt="gzip size"></a>
+<a href="https://unpkg.com/plutu-ts"><img src="https://img.badgesize.io/https://unpkg.com/plutu-ts@0.0.2/dist/index.js?compression=brotli" alt="brotli size"></a>
 </div>
 
 ## ✨ Features:
@@ -25,4 +25,14 @@ npm i plutu-ts
 or
 ```bash
 yarn add plutu-ts
+```
+
+## 🌐 Usage
+
+Import `plutu-ts` module in your project and initialize it with your apiKey and access token.
+
+```js
+import Plutu from 'plutu-ts'
+
+const Plutu = new Plutu({ apiKey: '%apiKey%', accessToken: '%accessToken%' })
 ```

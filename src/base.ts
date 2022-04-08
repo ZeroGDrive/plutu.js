@@ -1,3 +1,5 @@
+import fetch from 'isomorphic-unfetch';
+
 type Config = {
   apiKey: string;
   accessToken: string;
