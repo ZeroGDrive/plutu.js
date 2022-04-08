@@ -34,5 +34,5 @@ Import `plutu-ts` module in your project and initialize it with your apiKey and 
 ```js
 import Plutu from 'plutu-ts'
 
-const Plutu = new Plutu({ apiKey: '%apiKey%', accessToken: '%accessToken%' })
+const PlutuClient = new Plutu({ apiKey: '%apiKey%', accessToken: '%accessToken%' })
 ```
