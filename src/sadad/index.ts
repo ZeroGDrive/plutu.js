@@ -6,7 +6,7 @@ import {
   SadadVerifyResult,
 } from './types';
 export class Sadad extends Base {
-  async verify(
+  async verifySadad(
     body: SadadVerifyRequest
   ): Promise<PlutuResponse<SadadVerifyResult>> {
     return this.request<SadadVerifyResult>('transaction/sadadapi/verify', {
@@ -15,7 +15,7 @@ export class Sadad extends Base {
     });
   }
 
-  async confirm(
+  async confirmSadad(
     body: SadadConfirmRequest
   ): Promise<PlutuResponse<SadadConfirmResult>> {
     return this.request<SadadConfirmResult>('transaction/sadadapi/confirm', {

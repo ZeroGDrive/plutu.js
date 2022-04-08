@@ -7,7 +7,7 @@ import {
 } from './types';
 
 export class Adfali extends Base {
-  async verify(
+  async verifyAdfali(
     body: AdfaliVerifyRequest
   ): Promise<PlutuResponse<AdfaliVerifyResult>> {
     return await this.request('transaction/edfali/verify', {
@@ -16,7 +16,7 @@ export class Adfali extends Base {
     });
   }
 
-  async confirm(
+  async confirmAdfali(
     body: AdfaliConfirmRequest
   ): Promise<PlutuResponse<AdfaliConfirmResult>> {
     return await this.request('transaction/edfali/confirm', {
