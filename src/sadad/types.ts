@@ -9,7 +9,7 @@ export type SadadConfirmRequest = {
   amount: string;
   code: string;
   invoice_no: string;
-  customer_ip: string;
+  customer_ip?: string;
 };
 
 export type SadadVerifyResult = {

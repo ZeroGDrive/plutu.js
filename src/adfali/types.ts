@@ -8,7 +8,7 @@ export type AdfaliConfirmRequest = {
   code: string;
   amount: string;
   invoice_no: string;
-  customer_ip: string;
+  customer_ip?: string;
 };
 
 export type AdfaliVerifyResult = {
