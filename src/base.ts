@@ -46,13 +46,13 @@ export abstract class Base {
     };
 
     return fetch(url, config)
-      .then((r) => {
-        if (r.ok) {
-          return r.json();
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
         }
-        throw new Error(r.statusText);
+        return response.json().then((error) => Promise.reject(error));
       })
-      .catch((e: ErrorResponse) => {
+      .catch((e) => {
         return Promise.reject(e);
       });
   }
