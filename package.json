@@ -1,5 +1,5 @@
 {
-  "name": "plutu-ts",
+  "name": "plutu.js",
   "version": "0.0.3",
   "description": "API Wrapper for plutu.ly",
   "main": "dist/index.js",

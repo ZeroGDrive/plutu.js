@@ -1,21 +1,21 @@
 export type AdfaliVerifyRequest = {
   mobile_number: string;
-  amount: string;
+  amount: number | string;
 };
 
 export type AdfaliConfirmRequest = {
   process_id: string;
-  code: string;
-  amount: string;
+  code: number | string;
+  amount: string | number;
   invoice_no: string;
   customer_ip?: string;
 };
 
 export type AdfaliVerifyResult = {
-  process_id: string;
+  process_id: number;
 };
 
 export type AdfaliConfirmResult = {
-  transaction_id: string;
-  amount: string;
+  transaction_id: number;
+  amount: number;
 };
